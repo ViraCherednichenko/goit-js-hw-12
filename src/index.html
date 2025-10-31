@@ -2,21 +2,39 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>hw 12</title>
+
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    />
+
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
+    <main class="container">
+      <form class="form" id="search-form" autocomplete="off">
+        <label>
+          <input
+            type="text"
+            class="search-input"
+            name="query"
+            placeholder="Search images..."
+            required
+          />
+        </label>
+        <button type="submit" class="search-btn">Search</button>
+      </form>
 
-    <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
+      <ul class="gallery"></ul>
+
+      <div class="controls">
+        <button type="button" class="load-more hidden">Load more</button>
+        <span class="loader hidden" aria-hidden="true"></span>
+      </div>
     </main>
-
-    <load src="./partials/footer.html" />
 
     <script type="module" src="./main.js"></script>
   </body>
